@@ -1,0 +1,336 @@
+body {
+    background: #000;
+}
+
+header {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    background-color: #016FB9;
+    color: white;
+    text-align: center;
+}
+
+.logo {
+    width: 250px;
+    border: 6px solid red;
+    border-radius: 100%;
+    transform: scale(0.7);
+    transition: all .5s;
+}
+
+.logo:hover {
+    transition: all 0.5s;
+    transform: scale(0.8);
+}
+
+h1 {
+    color: black;
+    font-size: 70px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1:hover {
+    cursor: pointer;
+    color: darkorange;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    padding: 7px 10px;
+    color: #FFFD82;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    margin: 5px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    border:solid #000 1px;
+    margin: 0 auto;
+}
+
+th, td {
+    border: solid #fff 1px;
+    padding: 8px;
+    background-color: #27476E;
+}
+
+th {
+    color: white;
+    background: #001D4A;
+}
+
+td {
+    text-align: center;
+}
+
+
+.nuevoproducto {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    border-radius: 1px;
+} 
+
+.CrearProducto {
+    display: none;
+} 
+
+.Contenedor-eliminar {
+    display: none;
+}
+
+.contenedorOK {
+    display: none;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 2px solid black;
+    margin-bottom: 15px;
+    background: #24303c; 
+}
+
+input::placeholder {
+    color: white;
+}
+
+.botoncrear, .botoneliminar, .botonmodificar {
+    color: white;
+    border-radius: 8px;
+    width: 150px;
+    height: 30px;
+    /* margin: 10px; */
+    background-color: green; 
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+.botoncrear::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, #00fffc, transparent);
+    transform: translateX(-100%);
+    transition: .6s;
+    position: absolute;
+    color: white;
+}
+
+.botoncrear:hover, .botoneliminar:hover, .botonmodificar:hover {
+    background: #000;
+    box-shadow: 0 0 20px 5px #00fffc;
+}
+
+.botonmodificar {
+    margin-right: 10px;
+}
+
+.div-botones {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px; 
+    align-items: center; 
+    width: 100%;
+}
+
+.div-botones button {
+    margin: 0 auto;
+}
+
+.container {
+    margin: 10px;  
+}
+
+form {
+    text-align: center;
+    width: 350px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px; 
+    border-radius: 8px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px black;
+} 
+
+.botoneliminar {
+    text-align: center;
+}
+
+label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#boton {
+    cursor: pointer;
+    border: solid 2px #000;
+    width: 100%;  
+    padding: 10px;
+    background: green;
+    color: white;
+    font-size: 15px;
+    border-radius: 7px;
+    margin: 16px 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} 
+
+#fecha, #fechaamodif {
+    color: white;
+}
+
+#errores {
+    text-align: center;
+}
+
+
+/* #VerProducto2 {
+    justify-content: center;
+    text-align: center;
+} */
+
+#VerProductos {
+    height: 500px;
+    width: 100%;   
+    text-align: center;
+    justify-content: center;
+}
+
+.btn-mostrar {
+    color: white;
+    background: #004643;
+    border-radius: 6px;
+    width: 180px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-mostrar:hover {
+    border: solid 3px #000;
+}
+
+.Cancelar {
+    border: solid 2px #000;
+    color: white;
+    height: 30px;
+    width: 50%;
+    background: #FF1D15;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.Cancelar:hover, #boton:hover {
+    border: solid 3px #fff;
+}
+
+
+main {
+    flex: 1;
+    box-sizing: border-box;
+    background: #ECA400;
+}
+
+footer {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    background-color: #020202;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.pag-ant {
+    color: #000;
+}
+
+@media (max-width: 530px) {
+    form {
+        text-align: right;
+        width: 200px;
+        background: #006992;
+        padding: 20px;
+        margin: auto;
+        margin-top: 60px;
+        margin-bottom: 60px; 
+        border-radius: 8px;
+        font-family: 'calibri';
+        color: white;
+    } 
+
+    .div-botones {
+        display: grid;
+        gap: 15px;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: space-between; 
+        align-items: center; 
+        width: 100%;
+    }
+
+    #VerProductos2 {
+        width: 530px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    h1 {        
+        font-size: 30px;
+    }
+
+
+    li {
+        text-align: end;
+        font-size: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    Table {
+        width: 120px
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

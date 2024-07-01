@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="Header.js"></script>
+    <script src="Footer.js"></script>
+
+</head>
+
+<body>
+    <header></header>
+    
+    <main>
+        <a href="index.html" class="pag-ant">Volver a la página anterior</a>
+
+        <div class="div-botones">
+            <button class="botoncrear" onclick="MostrarFormCrear()"><b>Cargar producto</b></button>
+            <button class="botoneliminar" onclick="MostrarFormEliminar()"><b>Eliminar producto</b></button>
+            <button class="botonmodificar" onclick="MostrarFormModificar()"><b>Modificar producto</b></button>
+        </div>
+
+        <!-- Formulario de alta -->
+        <div id="CrearProductoID" class="CrearProducto">
+            <form id="form">
+                <div class="div-label"></div>
+                <label for="producto">Producto</label>
+                <input type="text" placeholder="Ingrese el nombre del producto" id="producto"><br>
+                <label for="preciopeso">Precio ($)</label>
+                <input type="number" placeholder="Ingresa el precio en pesos argentinos" id="preciopeso" step="0.01"><br>
+                <label for="preciodolar">Precio dólar (u$s)</label>
+                <input type="number" placeholder="Ingresa el precio en dólares" id="preciodolar" step="0.01"><br>
+                <label for="fecha">Fecha</label>
+                <input type="date" placeholder="Ingrese una fecha" id="fecha"><br>
+                <button onclick="GuardarProducto()" id="boton"><b>Crear producto</b></button>
+                <button onclick="MostrarFormCrear()" class="Cancelar"><b>Cerrar</b></button>
+                <p id="errores"></p>
+            </form>
+        </div>
+
+        <div>
+            <!-- Formulario de eliminación -->
+            <div class="Contenedor-eliminar" id="Contenedor-eliminar-ID">
+                <form id="form-elim">
+                    <label for="idok" name="idok">ID</label>
+                    <input type="text" id="idok" placeholder="Ingrese un ID">
+                    <button onclick="EliminarProducto()" id="boton"><b>Eliminar</b></button>
+                    <button onclick="MostrarFormEliminar()" class="Cancelar"><b>Cerrar</b></button>
+                    <p id="parrafo"></p>
+                </form>
+            </div>
+
+            <!-- Formulario de modificacion -->
+            <div class="contenedorOK" id="ContenedorID">
+                <!-- <div class="contenedor-modificar" id="modificacionFormulario"></div> -->
+                <form id="form-modif">
+                    <label for="IDaModificar">ID</label>
+                    <input type="text" placeholder="Ingrese el ID del producto a modificar" id="IDaModificar"><br>
+                    <label for="productoamodif">Producto</label>
+                    <input type="text" placeholder="Ingresa un producto" id="productoamodif"><br>
+                    <label for="preciopesoamodif">Precio peso ($)</label>
+                    <input type="number" placeholder="Ingresa el precio en pesos argentinos" id="preciopesoamodif"><br>
+                    <label for="preciodolaramodif">Precio dólar (u$S)</label>
+                    <input type="number" placeholder="Ingresa el precio en dólares" id="preciodolaramodif"><br>
+                    <label for="fechaamodif">Fecha</label>
+                    <input type="date" id="fechaamodif">
+                    <button onclick="ModificarProducto()" id="boton"><b>Modificar</b></button>
+                    <button onclick="MostrarFormModificar()" class="Cancelar"><b>Cerrar</b></button>
+                    <p id="mostrarp"></p>
+                </form>
+            </div>
+
+            <br><br><br><br><br><br><br><br><br>
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>
